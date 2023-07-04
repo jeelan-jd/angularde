@@ -1,0 +1,36 @@
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .scheduler-div {
+        max-width: calc(100% - 345px );
+        width: 100%;
+
+        @include for-lg {
+            max-width: 100%;
+            padding: 0 12.5px;
+            margin: 15px 0 10px;
+        }
+
+      }
+    
+      .rightfilter {
+        width: 100%;
+        max-width: 345px;        
+        background: $white;
+        border-left: 1px solid $light-gray2;
+        min-height: calc(100vh - 51px);
+
+        @include for-lg {
+            min-height: auto;
+            max-width: 100%;
+        }
+
+      }
+
+}
+
+
+
+

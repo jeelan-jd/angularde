@@ -1,0 +1,93 @@
+
+
+body,  header, ul, li, a, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-header {
+    min-height: 50px;
+    background: $white;
+    box-shadow: 0px 3px 6px #D3D3D341;
+    position: relative;
+    z-index: 1;
+
+    .navbar-expand-lg {
+        text-align: right;
+        padding: 14px 22px 14px 16px;
+        align-items: center;
+         display: flex;
+         justify-content: space-between;
+
+        @include for-lg {    
+            padding: 10px 12.5px 10px 12.5px;
+            align-items: center;
+            display: flex;            
+         }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            li {
+                margin-right: 30px;
+
+                @include for-lg {
+                    margin-right: 10px;
+                }
+
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                
+                .nav-link {
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $dark-gray;
+                    display: flex;
+                    align-items: center;
+
+                    [class^="icon-"] {
+                        margin-right: 6px;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        @include for-lg {
+                            display: none;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .heading-page {
+            font-size: 18px;
+            text-transform: capitalize;
+            color: $dark-gray;
+
+            @include for-lg { 
+                padding-right: 10px;    
+            }
+
+          }
+
+        .navbar-toggler {
+            @include for-lg {
+                margin-left:15px;
+                padding: 0;
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+    }
+
+  
+
+
+  }

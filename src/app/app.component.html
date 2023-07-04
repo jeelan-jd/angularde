@@ -1,0 +1,15 @@
+<div class="main-layout d-flex flex-column flex-lg-row">
+  
+    <app-sidebar></app-sidebar>
+  
+  <div class="main-wrapper">
+    <app-header class="main-header" [title]="title"></app-header>
+    <router-outlet (activate)="setHeader()"></router-outlet>
+    <!-- <app-body></app-body> -->
+  </div>
+</div>
+
+
+
+
+

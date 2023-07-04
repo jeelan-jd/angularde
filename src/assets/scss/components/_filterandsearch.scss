@@ -1,0 +1,341 @@
+.filter-selct {
+  display: flex;
+  align-items: center;
+  position: relative;
+   margin-right: 10px;
+
+  .form-select {
+    padding: 0 25px 0 30px;
+    border: none;
+    background-position: right 8px center;
+    box-shadow: none;
+    min-width: 94px;
+    border: 1px solid $light-gray;
+    border-radius: 8px;
+    height: 34px;
+    font-size: 14px;
+    color: $dark-gray2;
+
+    option {
+      font-size: 13px;
+      min-width: 94px;
+    }
+
+  }
+
+  span {
+    margin-right: 5px;
+    font-size: 13px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+     display: flex;
+     align-items: center;
+  }
+}
+
+
+.cmn-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid $light-gray;
+    border-radius: 8px;
+    height: 34px;
+    padding: 0 10px;
+
+    @include for-lg {
+      width: 100%;
+    }
+
+    .form-control {
+      padding: 0;
+      border: none;
+      font-size: 14px;
+      color: $dark-gray2;
+      font-weight: 400;
+      box-shadow: none;
+      outline: none;
+    }
+
+    .icon-Icon-search {
+      font-size: 12px;
+      color: $dark-gray2;
+      margin-right: 6px;
+      text-transform: capitalize;
+    }
+
+}
+
+.flt-head  {
+  padding: 15px 15px 0;
+
+  @include for-lg {
+    padding: 0px 12.5px 0;
+  }
+
+}
+
+.fbody-head {
+  margin: 20px 0 8px;
+
+  @include for-lg {
+    margin: 15px 0 8px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-gray3;
+    line-height: 14px;
+    margin: 0;
+    font-family: $font-roboto;
+  }
+
+  
+  & > {
+
+    div {
+      display: flex;
+      align-items: center;
+
+      .btn {
+        padding: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        h5 {
+          font-size: 14px;
+          color: $dark-gray4;
+          font-weight: 400;
+          margin: 0 5px;
+        }
+
+        [class^="icon-"] {
+          font-size: 12px;
+        }
+
+      }
+
+    }
+      
+    }
+}
+
+
+.fl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: calc(100vh - 242px);
+  overflow: hidden;
+    overflow-y: hidden;
+  overflow-y: auto;
+  padding-right: 10px;
+
+  @include  for-lg {
+    overflow: unset;
+    height: auto;
+    padding-right: 0px;
+  }
+
+  li {
+    padding: 16px 13px;
+  box-shadow: 0px 3px 6px #0000000A;
+  border: 1px solid $light-gray3;
+  border-radius: 8px;
+  margin-top: 8px;
+
+  h5 {
+
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark-gray4;
+     margin: 4.5px 0 3px;
+     font-weight: 400;
+
+    [class^="icon-"] {
+      font-size: 12px;
+      margin-right: 5px;
+      display: inline-block;
+      color: $dark-gray4;
+    }
+  }
+
+  & {
+    * {
+      font-family: $font-roboto;
+    }
+  }
+
+  .jobnumber {
+    font-size: 12px;
+    color: $dark-gray5;
+    margin: 0px;
+  }
+
+  .jobplacename {
+    font-size: 14px;
+    font-weight: 500;
+    color: $dark-gray;
+  }
+
+  & > {
+    div {
+      margin-top: 5px;
+      .btn {
+        height: 21px;
+        background: $light-gray4;
+        border-radius: $radius-4;
+        padding: 2px 4px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $dark-gray4;
+        line-height: 16px;
+        text-transform: capitalize;
+        margin-left: 8.5px;
+      }
+    }
+  }
+
+  [class^="icon-"]  {
+    margin-top: 2px;
+  }
+
+  .icon-Icon-status-medium {
+    font-size: 12px;
+  }
+
+  }
+
+}
+
+.pt-high {
+  color: $red;
+}
+
+.pt-medium {
+  color: $orange;
+}
+
+
+.flt-body {
+  padding: 0px 0px 0 15px;
+  margin-right: 15px;
+
+  @include for-lg {
+    padding: 0px 12.5px 0;
+    margin-right: 0px;
+  }
+}
+
+.flt-footer {
+  border-top: 1px solid $light-gray2;
+  margin-top: 25px;
+  padding: 0px 15px 0;
+
+  @include for-lg {
+    padding: 0px 12.5px 0;
+  }
+
+}
+
+
+.pagination {
+  margin: 0;
+  padding: 20px 0;
+  justify-content: end;
+
+  @include for-lg {
+    padding: 12px 0;
+  }
+
+  .page-item {
+
+    &.active {
+        .page-link {
+          background: $darkblue;
+          color: $white;
+          font-size: 14px;
+          font-weight: 500;
+          box-shadow: none;
+           outline: none;
+        }
+    } 
+    margin: 0 4px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .page-link {
+      width: 30px;
+      height: 30px;
+      background: $light-gray5;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      border-radius: $radius-8;
+      justify-content: center;
+      border: none;
+
+      [class^="icon-"] {
+        font-size: 4.5px;
+        color: $darkblue;
+      }
+
+      .left-arrow {
+        transform: rotate(90deg);
+      }
+
+      .right-arrow {
+        transform: rotate(-90deg);
+      }
+
+    }
+  }
+
+ }
+
+
+
+
+// scrollbar csss 
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .fl-list {
+    scrollbar-width: thin;
+    scrollbar-color: $light-gray6 $white;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .fl-list::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .fl-list::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  .fl-list::-webkit-scrollbar-thumb {
+    background-color: $light-gray6;
+    border-radius: 5px;
+    border: 0px solid $white;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  background:  $light-gray6; 
+}
+
+
+
+

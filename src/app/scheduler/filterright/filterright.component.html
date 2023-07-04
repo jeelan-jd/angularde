@@ -1,0 +1,59 @@
+<div class="rgt-filter">
+  <div class="flt-head d-flex align-items-center">
+    <div class="filter-selct">
+      <span class="icon-Icon-sort"></span>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Filter</option>
+      </select>
+    </div>
+    <div class="filter-srch cmn-search">
+      <span class="icon-Icon-search"></span>
+      <input type="text" class="form-control" placeholder="Search" />
+    </div>
+  </div>
+  <div class="flt-body">
+    <div class="d-flex align-items-center justify-content-between fbody-head">
+      <p>10 results</p>
+      <div>
+        <button type="button" class="btn">
+          <span class="icon-Icon-sort"></span>
+          <h5>Priority</h5>
+        </button>
+        <button type="button" class="btn">
+          <span class="icon-Icon-chevron"></span>
+        </button>
+      </div>
+    </div>
+    <ul class="fl-list">
+      <li *ngFor="let filterItem of filterall">
+        <p class="jobnumber">{{ filterItem["jobno"] }}</p>
+        <span class="jobplacename">{{ filterItem["jobplacename"] }}</span>
+        <h5>
+          <span class="icon-Icon-pin"></span>
+          {{ filterItem["joblocation"] }}
+        </h5>
+        <div class="d-flex align-items-center">
+          <div *ngIf="filterItem['priorityStatus'] === 'high'">
+            <span class="icon-Icon-status-high pt-high"></span>
+          </div>
+          <div *ngIf="filterItem['priorityStatus'] === 'medium'">
+            <span class="icon-Icon-status-medium pt-medium"></span>
+          </div>
+          <button type="button" class="btn">
+            {{ filterItem["jobstatus"] }}
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="flt-footer">
+    <ngb-pagination [collectionSize]="filterall.length">
+      <ng-template ngbPaginationPrevious>
+        <span class="icon-Icon-feather-chevron-left left-arrow"></span>
+      </ng-template>
+      <ng-template ngbPaginationNext>
+        <span class="icon-Icon-feather-chevron-left right-arrow"></span>
+      </ng-template>
+    </ngb-pagination>
+  </div>
+</div>
